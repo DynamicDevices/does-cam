@@ -12,7 +12,7 @@ height="${AV_VIDEO_HEIGHT:-720}"
 
 # FPS, Bitrate
 fps="${AV_VIDEO_FRAMERATE:-5}"
-bitrate="${AV_VIDEO_BITRATE:-6000000}"
+bitrate="${AV_VIDEO_BITRATE:-2000000}"
 
 # Other Raspivid options
 raspivid_options="-vf"
