@@ -18,7 +18,7 @@ bitrate="${AV_VIDEO_BITRATE:-6000000}"
 raspivid_options="-vf"
 
 # Do it
-raspivid -o - -t 0 -w $width -h $height -ev 25 -ex nightpreview -fps $fps -b $bitrate -ae 32,0xff,0x808000 -a 'MakeFest1 %Y-%m-%d %X' $raspivid_options | \
+raspivid -o - -t 0 -w $width -h $height -ev 25 -ex nightpreview -fps $fps -b $bitrate -ae  32,0xff,0x808000,0,0 -a 12 $raspivid_options | \
 tee video_$(date +%F_%T).h264 | \
 ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -f h264 -i - -vcodec copy -c:a aac -ar 44100 -b:a 128k -f flv $stream/$key
 
