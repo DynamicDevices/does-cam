@@ -1,18 +1,18 @@
 #!/bin/sh
 
 # Target RTMP stream
-stream=rtmp://a.rtmp.youtube.com/live2
+stream="${AV_STREAM_URL:-rtmp://a.rtmp.youtube.com/live2}"
 
 # Private key for RTMP stream
-key=5fqf-u2fk-p2pa-fdas
+key="${AV_STREAM_KEY:-5fqf-u2fk-p2pa-fdas}"
 
 # Width, Height
-width=1280
-height=720
+width="${AV_VIDEO_WIDTH:-1280}"
+height="${AV_VIDEO_HEIGHT:-720}"
 
 # FPS, Bitrate
-fps=25
-bitrate=6000000
+fps="${AV_VIDEO_FRAMERATE:-25}"
+bitrate="${AV_VIDEO_BITRATE:-6000000}"
 
 # Other Raspivid options
 raspivid_options=-vf
