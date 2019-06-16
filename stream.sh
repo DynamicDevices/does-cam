@@ -7,7 +7,7 @@ stream="${AV_STREAM_URL:-rtmp://a.rtmp.youtube.com/live2}"
 key="${AV_STREAM_KEY:-5fqf-u2fk-p2pa-fdas}"
 
 # Width, Height
-width="${AV_VIDEO_WIDTH:-1080}"
+width="${AV_VIDEO_WIDTH:-1280}"
 height="${AV_VIDEO_HEIGHT:-720}"
 
 # FPS, Bitrate
