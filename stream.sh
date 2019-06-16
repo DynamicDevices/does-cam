@@ -11,7 +11,7 @@ width="${AV_VIDEO_WIDTH:-1280}"
 height="${AV_VIDEO_HEIGHT:-720}"
 
 # FPS, Bitrate
-fps="${AV_VIDEO_FRAMERATE:-25}"
+fps="${AV_VIDEO_FRAMERATE:-5}"
 bitrate="${AV_VIDEO_BITRATE:-6000000}"
 
 # Other Raspivid options
@@ -19,6 +19,7 @@ raspivid_options="-vf"
 
 # Do it
 raspivid -o - -t 0 -w $width -h $height -ev 25 -ex nightpreview -fps $fps -b $bitrate $raspivid_options | \
-tee /data/video_$(date +%F_%T).h264 | \
 ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -f h264 -i - -vcodec copy -c:a aac -ar 44100 -b:a 128k -f flv $stream/$key
 
+#tee /data/video_$(date +%F_%T).h264 | \
+#
