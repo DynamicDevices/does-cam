@@ -7,10 +7,10 @@ ENV INITSYSTEM on
 WORKDIR /usr/src/app
 
 # xterm for 'resize' and ffmpeg for streaming
-RUN apt-get update && apt-get install xterm ffmpeg
+RUN apt-get update && apt-get install xterm ffmpeg && apt-get clean
 
 COPY sleep.sh .
 COPY stream.sh .
 
-CMD ["bash", "sleep.sh"]
-#CMD ["bash", "stream.sh"]
+#CMD ["bash", "sleep.sh"]
+CMD ["bash", "stream.sh"]
