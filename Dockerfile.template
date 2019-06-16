@@ -12,5 +12,5 @@ RUN apt-get update && apt-get install xterm ffmpeg && apt-get clean
 COPY sleep.sh .
 COPY stream.sh .
 
-CMD ["bash", "sleep.sh"]
-#CMD ["bash", "stream.sh"]
+#CMD ["bash", "sleep.sh"]
+CMD ["bash", "stream.sh"]
