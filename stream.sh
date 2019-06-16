@@ -11,7 +11,7 @@ width="${AV_VIDEO_WIDTH:-1280}"
 height="${AV_VIDEO_HEIGHT:-720}"
 
 # FPS, Bitrate
-fps="${AV_VIDEO_FRAMERATE:-25}"
+fps="${AV_VIDEO_FRAMERATE:-30}"
 bitrate="${AV_VIDEO_BITRATE:-2000000}"
 
 # Other Raspivid options
